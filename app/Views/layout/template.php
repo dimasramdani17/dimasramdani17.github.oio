@@ -149,44 +149,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Kontak Modal (Pop-up) -->
-    <div id="contact-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-gray-900 bg-opacity-50 dark:bg-opacity-70 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <!-- Latar belakang modal, klik untuk menutup -->
-        <div id="modal-overlay" class="absolute inset-0"></div>
-
-        <!-- Konten Modal -->
-        <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md p-6 transform transition-all scale-95 opacity-0" id="modal-content">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white" id="modal-title">
-                    Hubungi Saya
-                </h3>
-                <button id="close-modal-btn" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center transition-colors">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
-            
-            <p class="text-gray-600 dark:text-gray-400 mb-6">Anda dapat menghubungi saya melalui platform berikut:</p>
-
-            <div class="space-y-4">
-                <!-- WhatsApp -->
-                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', esc($biodata['telepon'])) ?>" target="_blank" class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
-                    <svg class="w-6 h-6 text-green-500 mr-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.61 15.36 3.48 16.84L2.06 21.94L7.3 20.52C8.75 21.32 10.36 21.8 12.04 21.8H12.05C17.5 21.8 21.96 17.35 21.96 11.91C21.96 6.45 17.5 2 12.04 2ZM12.05 19.99C10.59 19.99 9.17 19.58 7.94 18.81L7.54 18.57L4.43 19.38L5.26 16.36L5.02 15.96C4.18 14.63 4.18 14.63 3.73 13.13 3.73 11.91C3.73 7.39 7.47 3.65 12.05 3.65C16.63 3.65 20.37 7.39 20.37 11.91C20.37 16.43 16.63 19.99 12.05 19.99Z"/></svg>
-                    <span class="font-medium text-gray-900 dark:text-white">WhatsApp</span>
-                </a>
-                <!-- Email -->
-                <a href="mailto:<?= esc($biodata['email']) ?>" class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
-                    <svg class="w-6 h-6 text-indigo-500 mr-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
-                    <span class="font-medium text-gray-900 dark:text-white">Email</span>
-                </a>
-                <!-- GitHub -->
-                <a href="<?= esc($biodata['github']) ?>" target="_blank" class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white mr-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></svg>
-                    <span class="font-medium text-gray-900 dark:text-white">GitHub</span>
-                </a>
-            </div>
-        </div>
-    </div>
 </div>
 
 <!-- Script untuk Dark Mode Toggle, Mobile Menu, & Modal -->
